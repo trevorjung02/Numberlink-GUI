@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My test page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="drawView.js"></script>
+  <script type="module" src="solveButton.js"></script>
+  <script type="module" src="editButton.js"></script>
+  <script type="module" src="clearButton.js"></script>
+  <script type="module" src="restartButton.js"></script>
+  <script type="module" src="gridSizeInputs.js"></script>
+  <script type="module" src="helpButton.js"></script>
+</head>
+
+<body ondragstart="return false;" ondrop="return false;">
+  <div class="center-horizontal">
+    <div id="gameArea" class="center-horizontal">
+      <div id="canvasDiv">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+  </div>
+  <div id="toolbar" class="sidebar">
+    <button id="solveButton">Solve</button>
+    <button id="editButton">Edit</button>
+    <button id="clearButton">Clear</button>
+    <button id="restartButton">Restart</button>
+    <div class="break"></div>
+    <div id="rowColDiv">
+      <label for="rowInput" id="rowLabel">Rows:</label>
+      <input id="rowInput" type="number">
+      <div id="rowColBreak"></div>
+      <label for="colInput" id="colLabel">Cols:</label>
+      <input id="colInput" type="number">
+    </div>
+    <button id="helpButton">Help</button>
+  </div>
+  <div id="help" class="center-horizontal">
+    <p>
+      How to play:
+      Connect each pair of numbers with a path, by dragging with your mouse. Paths cannot overlap.
+      Additionally, you must fill up the entire board.
+
+      To erase a path, use the right mouse button. If you wish to restart the puzzle, press the restart button.
+
+      Solve:
+      Press the solve button to automatically solve the current puzzle. Note though that the solver assumes the puzzle
+      only has solutions that do not involve paths doubling back on themselves (in other words, the paths maintain a width of 1). 
+      Try finding a puzzle that breaks the solver!
+
+      Editing:
+      We've provided you with this initial puzzle, but you may create your own with the edit feature.
+      Enter edit mode by pressing the edit button. Then, click on squares and set them to whatever numbers you wish.
+      Press the edit button again to play your puzzle. To get a completely empty board, press the clear button.
+    </p>
+  </div>
+</body>
+
+</html>
