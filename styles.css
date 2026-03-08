@@ -70,6 +70,12 @@ input[type="number"] {
     align-items: center;
 }
 
+@media screen and (min-width:1000px) {
+    .sidebar>#rowColDiv {
+        grid-template-columns: repeat(2, 3rem);
+    }
+}
+
 .sidebar>#rowColDiv>#rowLabel {
     grid-column: 1;
 }
